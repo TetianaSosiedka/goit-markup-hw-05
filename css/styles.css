@@ -504,7 +504,11 @@ p {
   flex-basis: calc((100% - 3 * 32px) / 3);
   margin: 15px;
 }
+.portfolio-card-item:hover .portfolio-card-overlay {
+  transform: translateY(0);
+}
 .portfolio-card-link {
+  position: relative;
   display: block;
   width: 100%;
   border: 1px solid #eeeeee;
@@ -516,10 +520,34 @@ p {
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
 }
+.portfolio-card-action {
+  position: relative;
+  overflow: hidden;
+}
 .portfolio-card-img {
   display: block;
   width: 100%;
 }
+.portfolio-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
+}
+.portfolio-card-description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  padding: 0 24px;
+  color: var(--bg-main);
+}
+
 .portfolio-card-board {
   padding: 20px 24px;
 }
@@ -534,4 +562,5 @@ p {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
+  color: var(--color-text);
 }
