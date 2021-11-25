@@ -104,6 +104,7 @@ p {
   padding-bottom: 32px;
   text-transform: capitalize;
   color: var(--color-headlines);
+  transition: color 250ms var(--timing-function);
 }
 .contacts-list {
   display: flex;
@@ -117,6 +118,7 @@ p {
   padding-top: 32px;
   padding-bottom: 32px;
   color: inherit;
+  transition: color 250ms var(--timing-function);
 }
 .contact-icon {
   fill: currentColor;
@@ -185,6 +187,8 @@ p {
   color: var(--color-headlines-second);
   background-color: var(--color-decor);
   cursor: pointer;
+  transition: background-color 250ms var(--timing-function),
+    filter 250ms var(--timing-function);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -329,6 +333,8 @@ p {
   align-items: center;
   border-radius: 50%;
   color: var(--bg-icon);
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function);
 }
 .team-svg {
   display: flex;
@@ -367,6 +373,8 @@ p {
   color: var(--bg-icon);
   border: 1px solid var(--bg-icon);
   border-radius: 4px;
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function);
 }
 .client-link:hover,
 .client-link:focus {
@@ -410,12 +418,14 @@ p {
   display: block;
   margin-bottom: 9px;
   color: var(--color-headlines-second);
+  transition: color 250ms var(--timing-function);
 }
 .address-item:not(:last-child) {
   margin-bottom: 9px;
 }
 .address-link {
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms var(--timing-function);
 }
 .address-map-link:hover,
 .address-map-link:focus,
@@ -454,6 +464,7 @@ p {
   color: var(--bg-main);
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms var(--timing-function);
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
@@ -504,7 +515,8 @@ p {
   flex-basis: calc((100% - 3 * 32px) / 3);
   margin: 15px;
 }
-.portfolio-card-item:hover .portfolio-card-overlay {
+.portfolio-card-item:hover .portfolio-card-overlay,
+.portfolio-card-item:focus .portfolio-card-overlay {
   transform: translateY(0);
 }
 .portfolio-card-link {
