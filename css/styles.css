@@ -498,6 +498,8 @@ p {
   color: var(--color-headlines);
   background-color: var(--bg-section-decor);
   cursor: pointer;
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
@@ -514,10 +516,15 @@ p {
 .portfolio-card-item {
   flex-basis: calc((100% - 3 * 32px) / 3);
   margin: 15px;
+  transition: transform 250ms var(--timing-function);
 }
 .portfolio-card-item:hover .portfolio-card-overlay,
 .portfolio-card-item:focus .portfolio-card-overlay {
   transform: translateY(0);
+}
+.portfolio-card-item:hover .portfolio-card-description,
+.portfolio-card-item:focus .portfolio-card-description {
+  opacity: 1;
 }
 .portfolio-card-link {
   position: relative;
@@ -525,6 +532,7 @@ p {
   width: 100%;
   border: 1px solid #eeeeee;
   background-color: var(--bg-main);
+  transition: box-shadow 250ms var(--timing-function);
 }
 .portfolio-card-link:hover,
 .portfolio-card-link:focus {
@@ -558,6 +566,8 @@ p {
   transform: translate(-50%, -50%);
   padding: 0 24px;
   color: var(--bg-main);
+  opacity: 0;
+  transition: opacity 400ms var(--timing-function);
 }
 
 .portfolio-card-board {
