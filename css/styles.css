@@ -567,7 +567,7 @@ p {
   padding: 0 24px;
   color: var(--bg-main);
   opacity: 0;
-  transition: opacity 400ms var(--timing-function);
+  transition: opacity 450ms var(--timing-function);
 }
 
 .portfolio-card-board {
@@ -598,6 +598,7 @@ p {
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms var(--timing-function);
 }
 .is-hidden {
   opacity: 0;
@@ -611,6 +612,11 @@ p {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transform: scale(1);
+  transition: transform 250ms var(--timing-function);
+}
+.is-hidden .modal {
+  transform: scale(0.5);
 }
 .modal-button {
   position: absolute;
@@ -624,7 +630,12 @@ p {
   border-radius: 50%;
   background: var(--bg-main);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 250ms var(--timing-function);
 }
 .modal-button-icon {
   fill: #000000;
+}
+.modal-button:hover,
+.modal-button:focus {
+  transform: scale(1.07);
 }
